@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="coklat">#A5723E</color>
+    <color name="abu">#504F4F</color>
+    <color name="transparan">#DBBC9A</color>
+    <color name="transparan2">#B98E62</color>
+    <color name="bg_profile">#E9E2DB</color>
+
+
+</resources>
