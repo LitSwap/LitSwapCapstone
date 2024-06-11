@@ -8,6 +8,15 @@
     android:background="@color/coklat"
     tools:context="com.bangkit.caps.MainActivity">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@tools:sample/avatars"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/hi_there"
@@ -16,13 +25,12 @@
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/hi_there"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16" />
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.079" />
 
     <TextView
         android:id="@+id/lets_started"
@@ -31,76 +39,64 @@
         android:fontFamily="@font/poppins_semibold"
         android:text="Let's Get Started"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hi_there"
         app:layout_constraintVertical_bias="0.0" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_username"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="20dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="20dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameEditTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lets_started"
-        tools:ignore="MissingConstraints">
+        app:startIconDrawable="@drawable/icons_person"
+        app:errorEnabled="true">
+        <com.bangkit.customview.cv_login_name
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="18dp"
-            android:background="@drawable/icons_person" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
-            android:layout_marginTop="19.5dp"
-            android:fontFamily="@font/poppins_regular"
-            android:text="username"
-            android:textColor="@color/abu" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_pass"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="20dp"
-        android:layout_marginTop="65dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="20dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordEditTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cv_username"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toBottomOf="@+id/nameEditTextLayout"
+        app:startIconDrawable="@drawable/icons_key">
+            <com.bangkit.customview.cv_login_pass
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:inputType="textPassword" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="18dp"
-            android:background="@drawable/icons_key" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
-            android:layout_marginTop="19.5dp"
-            android:fontFamily="@font/poppins_regular"
-            android:text="password"
-            android:textColor="@color/abu" />
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cv_continue"
+        android:id="@+id/btnContinue"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="20dp"
@@ -109,14 +105,14 @@
         app:cardElevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cv_pass"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout"
         tools:ignore="MissingConstraints">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="138dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/poppins_semibold"
             android:text="Continue"
             android:textColor="@color/white"
@@ -125,7 +121,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="220dp"
+            android:layout_marginStart="210dp"
             android:layout_marginTop="23dp"
             android:background="@drawable/icon_next" />
 
@@ -140,20 +136,20 @@
         app:layout_constraintEnd_toStartOf="@+id/textView2"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cv_continue" />
+        app:layout_constraintTop_toBottomOf="@id/btnContinue" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="or"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/line2"
-        app:layout_constraintTop_toBottomOf="@+id/cv_continue" />
+        app:layout_constraintStart_toEndOf="@+id/line"
+        app:layout_constraintTop_toBottomOf="@+id/btnContinue" />
 
     <View
         android:id="@+id/line2"
@@ -165,28 +161,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cv_continue" />
+        app:layout_constraintTop_toBottomOf="@id/btnContinue" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
+        android:id="@+id/btnSignup"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_margin="20dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/transparan2"
         app:cardCornerRadius="30dp"
         app:cardElevation="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
-            android:layout_marginTop="17dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/poppins_semibold"
             android:text="Create An Account"
             android:textColor="@color/white"
