@@ -15,6 +15,10 @@
         <activity
             android:name=".SignupActivity"
             android:exported="false" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 073412898c38ed8c6f83a37787600e70a7366e7f
         <activity
             android:name=".save_book"
             android:exported="false" />
