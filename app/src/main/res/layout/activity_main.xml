@@ -92,7 +92,6 @@
                 android:backgroundTint="@color/white"
                 android:ems="10"
                 android:inputType="textPassword" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.cardview.widget.CardView
