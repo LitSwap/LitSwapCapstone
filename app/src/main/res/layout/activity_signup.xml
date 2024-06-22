@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/coklat"
-    tools:context="com.bangkit.caps.SignupActivity">
+    tools:context="com.bangkit.caps.ui.SignupActivity">
     <TextView
         android:id="@+id/tv_regist"
         android:layout_width="wrap_content"

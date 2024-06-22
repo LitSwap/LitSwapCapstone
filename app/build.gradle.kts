@@ -46,14 +46,21 @@ android {
 
 dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:okhttp:4.7.2")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.7.2")
+    implementation("org.jetbrains.Kotlinx:Kotlinx-Coroutines-core:1.4.2")
+    implementation("org.jetbrains.Kotlinx:Kotlinx-Coroutines-android:1.4.1")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.drawerlayout)
+    //implementation(libs.androidx.drawerlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 }

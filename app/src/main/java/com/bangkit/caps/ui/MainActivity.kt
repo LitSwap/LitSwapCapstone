@@ -1,14 +1,8 @@
-package com.bangkit.caps
+package com.bangkit.caps.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Spinner
-import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.bangkit.caps.R
 import com.bangkit.caps.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

@@ -1,10 +1,8 @@
-package com.bangkit.caps
+package com.bangkit.caps.ui
 
 import android.os.Bundle
-import android.util.Log
-import android.widget.Spinner
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.bangkit.caps.R
 
 class SignupActivity : AppCompatActivity() {
 

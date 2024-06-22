@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="@color/bg_profile"
-    tools:context=".profile">
+    tools:context=".ui.profile">
 
     <ImageView
         android:id="@+id/ic_back"
